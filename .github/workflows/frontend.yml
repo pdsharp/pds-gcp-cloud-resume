@@ -9,12 +9,15 @@ on:
         branches: [ main ]
 
 jobs:
-  job_id:
+  build:
+    runs
     permissions:
       contents: 'read'
       id-token: 'write'
 
+    runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
