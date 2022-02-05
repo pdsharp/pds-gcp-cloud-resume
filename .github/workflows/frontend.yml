@@ -34,4 +34,4 @@ jobs:
       uses: 'google-github-actions/setup-gcloud@v0'
 
     - name: 'invalidate cdn cache'
-      run: 'gcloud compute url-maps invalidate-cdn-cache pds-gcp-resume --path "*"'
+      run: 'gcloud compute url-maps invalidate-cdn-cache pds-gcp-resume --path "/"'
