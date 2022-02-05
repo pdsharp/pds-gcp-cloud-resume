@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-    runs
     permissions:
       contents: 'read'
       id-token: 'write'
