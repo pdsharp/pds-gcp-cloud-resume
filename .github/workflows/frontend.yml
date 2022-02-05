@@ -23,10 +23,10 @@ jobs:
         workload_identity_provider: 'projects/709426595530/locations/global/workloadIdentityPools/github/providers/github'
         service_account: 'github@deep-mark-340004.iam.gserviceaccount.com'
 
-    - id: 'upload-folder'
+    - id: 'upload-file'
       uses: 'google-github-actions/upload-cloud-storage@v0'
       with:
-        path: '/'
+        path: '/*'
         destination: 'pds-gcp-resume/'
 
     - name: 'gcloud sdk'
