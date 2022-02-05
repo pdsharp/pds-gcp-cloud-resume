@@ -26,7 +26,7 @@ jobs:
     - id: 'upload-folder'
       uses: 'google-github-actions/upload-cloud-storage@v0'
       with:
-        path: '/'
+        path: '.'
         destination: 'pds-gcp-resume/'
 
     - name: 'gcloud sdk'
