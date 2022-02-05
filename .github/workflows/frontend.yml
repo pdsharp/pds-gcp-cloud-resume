@@ -29,8 +29,8 @@ jobs:
         path: ''
         destination: 'pds-gcp-resume/'
 
-    - name: 'Set up Cloud SDK'
+    - name: 'gcloud sdk'
       uses: 'google-github-actions/setup-gcloud@v0'
 
-    - name: 'Use gcloud CLI'
-      run: 'gcloud compute url-maps invalidate-cdn-cache pds-gcp-resume --path "/"'
+    - name: 'invalidate cdn cache'
+      run: 'gcloud compute url-maps invalidate-cdn-cache pds-gcp-resume --path "*"'
