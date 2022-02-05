@@ -26,5 +26,11 @@ jobs:
     - id: 'upload-folder'
       uses: 'google-github-actions/upload-cloud-storage@v0'
       with:
-        path: 'frontend/'
+        path: '/'
         destination: 'pds-gcp-resume/'
+
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v0'
+
+    - name: 'Use gcloud CLI'
+      run: 'gcloud compute url-maps invalidate-cdn-cache pds-gcp-resume --path "/"'
