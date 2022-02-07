@@ -9,7 +9,7 @@ def visitcount(request):
         'Access-Control-Allow-Origin': '*'
     }
     try:
-        newcount = int(counter.get().to_dict()['count']) + 2
+        newcount = int(counter.get().to_dict()['count']) + 1
         counter.set({'count': newcount})
     except (TypeError):
         newcount = 1
