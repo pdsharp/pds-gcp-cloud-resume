@@ -1,4 +1,4 @@
-const functionApi = 'https://us-west1-deep-mark-340004.cloudfunctions.net/resumecounter'
+const functionApi = 'https://us-west1-pds-cloud-resume.cloudfunctions.net/counter'
 
 const getVisitCount = () => {
     let count = 30;
