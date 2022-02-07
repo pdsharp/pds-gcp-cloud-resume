@@ -26,3 +26,4 @@ jobs:
         name: 'counter'
         runtime: 'python39'
         region: us-west1
+        entrypoint: 'visitcount'
