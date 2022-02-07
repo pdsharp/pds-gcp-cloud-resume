@@ -25,5 +25,6 @@ jobs:
       with:
         name: 'counter'
         runtime: 'python39'
-        region: us-west1
+        region: 'us-west1'
         entry_point: 'visitcount'
+        source_dir: '/backend/counter'
