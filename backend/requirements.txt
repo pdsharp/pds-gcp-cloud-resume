@@ -1,0 +1,4 @@
+google-cloud-firestore
+flask
+mock-firestore
+pytest
