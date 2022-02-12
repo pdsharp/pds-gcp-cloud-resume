@@ -3,16 +3,16 @@ from google.cloud import firestore
 
 db = firestore.Client()
 
-def visitcount(request, db):
+def visitcount(request):
     counter = db.collection(u'counter').document(u'counter')
     try:
         newcount = int(counter.get().to_dict()['count']) + 1
         counter.set({'count': newcount})
-    except (TypeError):
+    except (TypeError, KeyError):
         newcount = 1
         counter.set({'count': newcount})
-    return {
-	    'body': newcount,
-	    'statusCode': 200,
-	    'headers': {'Access-Control-Allow-Origin': '*'}
-    }
+    headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+        }
+    return (f"{newcount}", 200, headers)
