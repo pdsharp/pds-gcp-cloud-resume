@@ -3,7 +3,7 @@ from counter.main import visitcount
 from unittest.mock import patch
 
 
-def test_set_get_db():
+def test_get_db():
     db = fs.MockFirestore()
     counter = db.collection(u'counter').document(u'counter')
     counter.set({'count': 42})
