@@ -11,10 +11,7 @@ def test_get_db():
     assert newcount == 42
 
 @patch('counter.main.db', fs.MockFirestore())
-def test_insert_db():
+def test_insert_db_and_http_response():
     response = visitcount(None)
     assert response[0] == '1'
-
-def test_http_response():
-    response = visitcount(None)
     assert response[1] == 200
