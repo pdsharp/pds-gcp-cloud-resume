@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("pds-cloud-resume-27af0fd58f83.json")
+  credentials = file("creds.json")
 
   project = "pds-cloud-resume"
   region  = "us-west1"
